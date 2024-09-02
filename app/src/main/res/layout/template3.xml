@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editableArea_backround"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/download"
+        android:elevation="8dp"
+        android:padding="16dp">
+
+
+        <!-- Example boxes -->
+
+
+        <LinearLayout
+            android:id="@+id/box1"
+            android:layout_width="202dp"
+            android:layout_height="355dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/sunset"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:tag="box1"
+            app:layout_constraintBottom_toTopOf="@+id/box6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box4">
+
+            <TextView
+                android:id="@+id/messageEditText"
+                android:layout_width="171dp"
+                android:layout_height="322dp"
+                android:ellipsize="none"
+                android:gravity="center"
+                android:maxLines="15"
+                android:paddingBottom="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/box2"
+            android:layout_width="198dp"
+            android:layout_height="143dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/sunset"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:tag="box2"
+            app:layout_constraintEnd_toStartOf="@+id/box1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/box3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/cityTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="4dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/weatherTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/box3"
+            android:layout_width="256dp"
+            android:layout_height="412dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/sunset"
+            android:elevation="4dp"
+            android:tag="box3"
+            app:layout_constraintBottom_toTopOf="@+id/box6"
+            app:layout_constraintEnd_toStartOf="@+id/box5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:id="@+id/box4"
+            android:layout_width="188dp"
+            android:layout_height="53dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/sunset"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:tag="box4"
+            app:layout_constraintEnd_toEndOf="@+id/box1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"
+                android:text="dd/mm/yyyy"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/box6"
+            android:layout_width="928dp"
+            android:layout_height="57dp"
+            android:background="@drawable/sunset"
+            android:elevation="4dp"
+            android:tag="box6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.example.mytvapplication.JokeBoxView
+            android:id="@+id/box7"
+            android:layout_width="173dp"
+            android:layout_height="103dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="31dp"
+            android:background="@drawable/sunset"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:tag="box7"
+            app:layout_constraintBottom_toTopOf="@+id/box6"
+            app:layout_constraintEnd_toStartOf="@+id/box3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.mytvapplication.JokeBoxView
+            android:id="@+id/box8"
+            android:layout_width="189dp"
+            android:layout_height="91dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/sunset"
+            android:elevation="6dp"
+            android:padding="16dp"
+            android:tag="box8"
+            app:layout_constraintEnd_toStartOf="@+id/box1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/box3"
+            app:layout_constraintTop_toBottomOf="@+id/box2" />
+
+        <FrameLayout
+            android:id="@+id/box5"
+            android:layout_width="214dp"
+            android:layout_height="155dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/sunset"
+            android:elevation="6dp"
+            android:tag="box5"
+            app:layout_constraintBottom_toTopOf="@+id/box6"
+            app:layout_constraintEnd_toStartOf="@+id/box1"
+            app:layout_constraintTop_toBottomOf="@+id/box8">
+
+            <TextView
+                android:id="@+id/stockDataTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="Stock Data"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.10.248.136</domain>
+        <domain includeSubdomains="false">193.106.55.136</domain>
+        <domain includeSubdomains="false">www.ynet.co.il</domain>
+    </domain-config>
+
+</network-security-config>
